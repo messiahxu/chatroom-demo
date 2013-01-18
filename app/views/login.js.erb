@@ -1,0 +1,12 @@
+window.location.href = '/';
+<% broadcast '/login' do %>
+  html = "<div class='coming-notice'><%= current_user %> is coming ...</div><br/>"
+
+  $('#container').append(html);
+
+  if($('#container')[0] == null){
+  }
+  else{
+    $('#container')[0].scrollTop = 100000;
+  }
+<% end %>

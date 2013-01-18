@@ -1,0 +1,35 @@
+<h5>Sign in as <span style='color: #6D9C00;'><%= current_user %></span>,&nbsp;&nbsp;
+  <%= link_to :logout, logout_path, remote: true %>.
+</h5>
+<div id='container'>
+  <% @messages.each do |message| %>
+    <span class='messager'>
+      <%= message.messager %>
+    </span>
+    <span class='created_at'>
+      <%= message.created_at.strftime "%T" %>
+    </span>
+    <div class='clear'></div>
+    <span class='body'>
+      <%= message.body %>
+    </span>
+    <br/>
+  <% end %>
+</div>
+<br/>
+<div id='chat-box'>
+  <div id='chat-form'>
+    <%= form_tag messages_path, remote: true do %>
+      <%= text_area_tag :body %>
+      <br/>
+      <%= submit_tag :submit %>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  var height = $(window).height() * 0.65;
+  $('#container').css('height', height);
+  $('#container')[0].scrollTop = 100000;
+
+</script>

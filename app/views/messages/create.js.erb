@@ -1,0 +1,9 @@
+<% broadcast "/messages" do  %>  
+  html = "<span class='messager'><%= escape_javascript(@message.messager.html_safe) %></span> <span class='created_at'><%= @message.created_at.strftime('%T') %></span> <div class='clear'> </div> <span class='body'> <%= escape_javascript(@message.body.html_safe) %> </span><br/>"
+
+  $('#container').append(html);
+
+  $('#container')[0].scrollTop = 100000;
+
+  $('#chat-form #body').val('');
+<% end %>  

@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+#container {
+  width: 680px; 
+  border: solid #bbb 1px;
+  overflow: auto;
+  padding: 10px;
+}
+
+#chat-box {
+  width: 700px; 
+}
+
+#container span {
+  display: block;
+  line-height: 30px;
+}
+
+#container .messager {
+  float: left;
+  width: 90%;
+  color: #6D9CBE;
+}
+
+#container .created_at {
+  float: left;
+  width: 10%;
+  color: #6D9CBE;
+}
+
+#container .body {
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.clear {
+  clear: both;
+}
+
+#chat-form textarea {
+  height: 65px;
+  width: 680px;
+  padding: 10px;
+}
+    
+#chat-form input[type='submit'] {
+  float: right;
+}
+
+.coming-notice {
+  color: #333;
+  border: 1px #bbd2bc solid;
+  background-color: #dcf7dd;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.leaving-notice {
+  color: #333;
+  border: 1px #dd1144 solid;
+  background-color: #ffcccc;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+}

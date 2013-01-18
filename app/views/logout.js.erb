@@ -1,0 +1,12 @@
+window.location.href = '/';
+<% broadcast '/logout' do %>
+  html = "<div class='leaving-notice'><%= current_user %> is leaving...</div><br/>"
+
+  $('#container').append(html);
+
+  if($('#container')[0] == null){
+  }
+  else{
+    $('#container')[0].scrollTop = 100000;
+  }
+<% end %>
