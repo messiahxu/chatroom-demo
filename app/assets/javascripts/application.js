@@ -22,7 +22,7 @@ $('document').ready(function(){
   });
 
   $(function(){  
-    var client = new Faye.Client('http://192.168.2.118:9292/faye');  
+    var client = new Faye.Client('http://faye-demo.herokuapp.com/faye');  
     client.subscribe("/messages", function(data){  
       eval(data);
     });  
