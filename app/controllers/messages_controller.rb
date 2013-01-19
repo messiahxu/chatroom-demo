@@ -1,12 +1,8 @@
 class MessagesController < ApplicationController
   before_filter :n2br, only: [:create] 
 
-  def edit
-    @message = Message.first
-  end
-
   def index
-    @messages = Message.all
+    @messages = Message.limit 50
   end
 
   def create
