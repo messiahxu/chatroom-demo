@@ -15,10 +15,33 @@
 //= require_tree .
 
 $('document').ready(function(){
+
   $('#chat-form #body').keydown(function(e){
     if (e.ctrlKey && e.keyCode === 13) {
       $('#chat-form form').submit();
     }
+  });
+
+  $('#logout-link').click(function(){
+    $(this).text('logouting...');
+  });
+
+  $('#chat-form form').submit(function(){
+    if($('#chat-form #body').val() == ''){
+      alert('Can not commit empty message...');
+      return false;
+    }
+    $('#chat-form input[type="submit"]').val('submiting');
+    $('#chat-form input[type="submit"]').attr('disabled', 'disabled');
+  });
+
+  $('#login-form').submit(function(){
+    if($('#login-form #name').val() == ''){
+      alert('What is your name?');
+      return false;
+    }
+    $('#login-form input[type="submit"]').val('logining');
+    $('#login-form input[type="submit"]').attr('disabled', 'disabled');
   });
 
   $(function(){  

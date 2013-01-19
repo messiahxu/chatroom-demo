@@ -1,5 +1,5 @@
 <h5>Sign in as <span style='color: #6D9C00;'><%= current_user %></span>,&nbsp;&nbsp;
-  <%= link_to :logout, logout_path, remote: true %>.
+  <%= link_to :logout, logout_path, remote: true, id: 'logout-link' %>.
 </h5>
 <div id='container'>
   <% @messages.each do |message| %>

@@ -1,4 +1,5 @@
 window.location.href = '/';
+
 <% broadcast '/logout' do %>
   html = "<div class='leaving-notice'><%= current_user %> is leaving...</div><br/>"
 
